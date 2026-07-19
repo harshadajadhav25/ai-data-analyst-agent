@@ -1,0 +1,504 @@
+/* =========================================
+   InsightAI - Premium Streamlit UI
+   ========================================= */
+
+
+/* =========================================
+   App Background
+   ========================================= */
+
+.stApp {
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(99, 102, 241, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(14, 165, 233, 0.08),
+            transparent 24%
+        ),
+        #f6f8fc;
+}
+
+
+/* =========================================
+   Main Container
+   ========================================= */
+
+.block-container {
+    max-width: 1220px;
+    padding-top: 1.8rem;
+    padding-bottom: 4rem;
+}
+
+
+/* =========================================
+   Premium Header / Hero
+   ========================================= */
+
+.insight-header {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.98),
+            rgba(248,250,255,0.96)
+        );
+
+    border: 1px solid rgba(226, 232, 240, 0.95);
+
+    border-radius: 24px;
+
+    padding: 1.6rem 1.8rem;
+
+    margin-bottom: 1.5rem;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.07);
+}
+
+
+.insight-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -70px;
+    top: -90px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(99, 102, 241, 0.16),
+            rgba(14, 165, 233, 0.10)
+        );
+}
+
+
+.insight-title {
+    position: relative;
+
+    font-size: 2.15rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.03em;
+
+    color: #0f172a;
+
+    margin: 0;
+}
+
+
+.insight-subtitle {
+    position: relative;
+
+    margin-top: 0.45rem;
+
+    font-size: 1rem;
+
+    color: #64748b;
+
+    max-width: 650px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   Section Headings
+   ========================================= */
+
+h1,
+h2,
+h3 {
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+
+h2,
+h3 {
+    font-weight: 750;
+}
+
+
+/* =========================================
+   Sidebar
+   ========================================= */
+
+section[data-testid="stSidebar"] {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fafc 100%
+        );
+
+    border-right:
+        1px solid #e2e8f0;
+}
+
+
+section[data-testid="stSidebar"]
+.block-container {
+    padding-top: 1.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+
+.sidebar-title {
+    font-size: 0.9rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    font-weight: 800;
+
+    color: #475569;
+
+    margin-top: 1.15rem;
+
+    margin-bottom: 0.65rem;
+}
+
+
+/* =========================================
+   Sidebar Upload Area
+   ========================================= */
+
+div[data-testid="stFileUploader"] {
+    background: #ffffff;
+
+    border:
+        1px dashed #cbd5e1;
+
+    border-radius: 16px;
+
+    padding: 0.8rem;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+div[data-testid="stFileUploader"]:hover {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 6px 20px rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================================
+   Metric Cards
+   ========================================= */
+
+div[data-testid="stMetric"] {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fbfdff
+        );
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 0.9rem 1rem;
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+
+div[data-testid="stMetricLabel"] {
+    color: #64748b;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+}
+
+
+div[data-testid="stMetricValue"] {
+    font-weight: 800;
+
+    color: #0f172a;
+}
+
+
+/* =========================================
+   Chat Area
+   ========================================= */
+
+div[data-testid="stChatMessage"] {
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 0.8rem 1rem;
+
+    margin-bottom: 0.9rem;
+
+    box-shadow:
+        0 8px 22px rgba(15, 23, 42, 0.045);
+}
+
+
+/* User message */
+div[data-testid="stChatMessage"]
+[data-testid="stChatMessageAvatarUser"] {
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+}
+
+
+/* Assistant message */
+div[data-testid="stChatMessage"]
+[data-testid="stChatMessageAvatarAssistant"] {
+    background:
+        linear-gradient(
+            135deg,
+            #0ea5e9,
+            #14b8a6
+        );
+}
+
+
+/* =========================================
+   Chat Input
+   ========================================= */
+
+div[data-testid="stChatInput"] {
+    background: transparent;
+}
+
+
+div[data-testid="stChatInput"] textarea {
+    border-radius: 16px !important;
+
+    border:
+        1px solid #cbd5e1 !important;
+
+    background:
+        rgba(255, 255, 255, 0.98) !important;
+
+    box-shadow:
+        0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================
+   Buttons
+   ========================================= */
+
+.stButton > button {
+    width: 100%;
+
+    border-radius: 12px;
+
+    border:
+        1px solid #dbe3ee;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-weight: 700;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.stButton > button:hover {
+    border-color: #6366f1;
+
+    color: #4f46e5;
+
+    box-shadow:
+        0 6px 18px rgba(99, 102, 241, 0.12);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   Expanders
+   ========================================= */
+
+details {
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    padding: 0.35rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+details:hover {
+    border-color: #cbd5e1;
+}
+
+
+/* =========================================
+   Dataframes
+   ========================================= */
+
+div[data-testid="stDataFrame"] {
+    background: #ffffff;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================
+   Plotly Charts
+   ========================================= */
+
+div[data-testid="stPlotlyChart"] {
+    background:
+        rgba(255, 255, 255, 0.98);
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 0.8rem;
+
+    box-shadow:
+        0 10px 28px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================
+   Alerts / Info Boxes
+   ========================================= */
+
+div[data-testid="stAlert"] {
+    border-radius: 14px;
+
+    border:
+        1px solid rgba(148, 163, 184, 0.25);
+}
+
+
+/* =========================================
+   Divider
+   ========================================= */
+
+hr {
+    border: none;
+
+    height: 1px;
+
+    background: #e2e8f0;
+
+    margin: 1.5rem 0;
+}
+
+
+/* =========================================
+   Scrollbars
+   ========================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* =========================================
+   Hide Streamlit Footer
+   ========================================= */
+
+footer {
+    visibility: hidden;
+}
+
+
+/* =========================================
+   Responsive
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .block-container {
+        padding-top: 1rem;
+    }
+
+
+    .insight-header {
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+
+    .insight-title {
+        font-size: 1.7rem;
+    }
+
+
+    .insight-subtitle {
+        font-size: 0.92rem;
+    }
+
+}
