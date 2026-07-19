@@ -2,7 +2,7 @@
 
 InsightAI is a Generative AI-powered data analytics application that enables users to upload CSV datasets and interact with their data using natural language.
 
-Instead of manually writing Python or Pandas queries, users can simply ask questions such as:
+Instead of manually writing Python or Pandas queries, users can ask questions such as:
 
 - "Summarize this dataset and highlight the most important insights."
 - "What are the top 10 products by sales?"
@@ -14,29 +14,60 @@ InsightAI interprets the user's question, dynamically generates Pandas analysis 
 
 ---
 
+## 🚀 Live Demo
+
+Try InsightAI here:
+
+**[Launch InsightAI](https://ai-data-analyst-agent-csv.streamlit.app/)**
+
+> Upload a CSV dataset and start asking questions about your data using natural language.
+
+---
+
+## 🖥️ Application Preview
+
+### AI Data Analytics Dashboard
+
+Upload a CSV dataset and instantly view dataset health information, data quality metrics, cleaning options, and AI-powered analysis suggestions.
+
+![InsightAI Dashboard](assets/insightai-dashboard.png)
+
+### AI-Powered Analysis & Visualization
+
+Ask questions about your dataset in natural language. InsightAI analyzes the data, explains the results, and automatically generates relevant visualizations.
+
+![InsightAI Analysis](assets/ai-analysis.png)
+
+---
+
 ## ✨ Key Features
 
 ### 🤖 Natural Language Data Analysis
-Ask questions about your dataset in plain English without writing SQL or Python queries.
+
+Ask questions about your dataset in plain English without manually writing Pandas or SQL queries.
 
 ### 🧠 Generative AI Integration
-Uses the Groq API and Large Language Models (LLMs) to understand analytical questions, generate Pandas operations, and explain results.
+
+Uses the Groq API and Large Language Models (LLMs) to understand analytical questions, generate Pandas operations, and explain analysis results.
 
 ### 📁 Dynamic CSV Analysis
+
 Upload different CSV datasets and analyze them dynamically without building dataset-specific queries.
 
 ### 🧹 Automated Data Cleaning
-The application provides an optional cleaned version of the uploaded dataset by:
 
-- Removing exact duplicate rows
-- Handling missing text values
-- Preserving missing numeric values to avoid introducing misleading data
-- Resetting the dataset index after cleaning
+InsightAI provides an optional data-cleaning workflow that:
+
+- Removes exact duplicate rows
+- Handles missing text values
+- Preserves missing numeric values to avoid introducing misleading data
+- Resets the dataset index after cleaning
 
 ### 📊 AI-Powered Visualizations
-InsightAI determines when a visualization is useful and dynamically generates charts based on the analysis.
 
-Supported chart types include:
+InsightAI determines when a visualization would improve the analysis and dynamically selects an appropriate chart.
+
+Supported visualizations include:
 
 - Bar Charts
 - Line Charts
@@ -45,10 +76,12 @@ Supported chart types include:
 - Pie Charts
 
 ### 💬 Conversational Analytics
+
 Maintains recent conversation context, allowing users to ask follow-up questions about their data.
 
 ### 🔍 Dataset Health Monitoring
-Automatically displays key dataset information, including:
+
+Automatically displays important dataset information, including:
 
 - Number of rows
 - Number of columns
@@ -58,7 +91,8 @@ Automatically displays key dataset information, including:
 - Dataset preview
 
 ### ⚡ Suggested AI Prompts
-Users can quickly start analysis using built-in prompts such as:
+
+Users can quickly start exploring their dataset using built-in prompts such as:
 
 - Summarize Dataset
 - Find Key Trends
@@ -66,7 +100,8 @@ Users can quickly start analysis using built-in prompts such as:
 - Find Patterns
 
 ### 🔐 Safer AI-Generated Code Execution
-Generated analysis code is validated before execution, with restrictions designed to prevent unsafe operations.
+
+Generated analysis code passes through validation and execution restrictions designed to reduce unsafe operations.
 
 ---
 
@@ -129,6 +164,10 @@ AI Explanation    Visualization Engine
 ```text
 ai-data-analyst-agent/
 │
+├── assets/
+│   ├── insightai-dashboard.png
+│   └── ai-analysis.png
+│
 ├── src/
 │   ├── __init__.py
 │   ├── ai_agent.py
@@ -182,8 +221,6 @@ Navigate to the project directory:
 cd ai-data-analyst-agent
 ```
 
----
-
 ### 2. Create a Virtual Environment
 
 ```bash
@@ -204,15 +241,11 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
----
-
 ### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
-
----
 
 ### 4. Configure the Groq API Key
 
@@ -224,29 +257,13 @@ GROQ_API_KEY=your_groq_api_key_here
 
 > ⚠️ Never commit your `.env` file or API keys to GitHub.
 
-The `.gitignore` file should include:
-
-```text
-.env
-venv/
-.venv/
-__pycache__/
-*.pyc
-```
-
----
-
 ### 5. Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-Open the local URL displayed in the terminal, typically:
-
-```text
-http://localhost:8501
-```
+Then open the local Streamlit URL displayed in the terminal.
 
 ---
 
@@ -345,7 +362,7 @@ Planned improvements include:
 - 💾 Persistent conversation history
 - 📥 Downloadable analysis reports
 - 🔑 User authentication
-- ☁️ Cloud deployment
+- ☁️ Additional cloud deployment options
 - 📱 Fully responsive user interface
 
 ---
@@ -378,8 +395,9 @@ The project demonstrates practical experience with:
 
 Data Analyst | Data Engineer | AI & Data Enthusiast
 
-- GitHub: `harshadajadhav25`
-- Portfolio: `harshadajadhav25.github.io`
+- GitHub: [harshadajadhav25](https://github.com/harshadajadhav25)
+- Portfolio: [harshadajadhav25.github.io](https://harshadajadhav25.github.io/)
+- Live Demo: [InsightAI](https://ai-data-analyst-agent-csv.streamlit.app/)
 
 ---
 
